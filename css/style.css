@@ -1,0 +1,123 @@
+/* logo keyframes */
+@keyframes logomove{
+    from{width: 25px;}
+    from{opacity: 0;}
+    to{width: 475px;}
+    to{opacity: 1.;}
+}
+#logo{
+    animation: 5s logomove;
+}
+
+body{
+    font-family:"Poppins", serif;
+    background-image: url("../images/concrete_seamless.png");
+    background-color: #f1f1f1;
+}
+
+/* FOR IMAGE AT 720 PX */
+header{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.nav_links{
+    display: flex;
+    flex-direction: column;
+    /* ?USE FLEX TO MATCH EXAMPLE */
+}
+a:visited{
+    color:blue;
+}
+.card>header{
+    background-color: #288088;
+    border: 2px solid #45adad;
+    padding: 20px 0px 20px 0px;
+    border-radius: 50px 50px 0px 0px;
+}
+.card{
+    flex-basis: 450px;
+    border-radius: 50px 50px 0px 0px;
+}
+
+.pricing{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery img{
+    width: 300px;
+    margin: 10px;
+    border: solid 10px #50c7c7;
+}
+@media screen and (min-width: 900px){
+    header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .nav_links{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .card{
+        flex-basis: 275px;
+    }
+    .pricing{
+        flex-basis: 275px;
+    }
+    body>header{
+        position: sticky;
+        top: 0;
+    }
+}
+@media (pefers-reducted-motion){
+    #logo{
+        animation-play-state: paused;
+    }   
+}
+@media print{
+    body{
+        font-family: Arial, Helvetica;
+        background-image: none;
+    }
+    nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .nav_links{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .pricing{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    .card{
+        border: solid 2px #45addd;
+        flex-basis: 325px;
+    }
+    #gallery{
+        visibility: hidden;
+    }
+    .gallery{
+        display: none;
+    }
+    .card{
+        content: icon;
+    }
+    .card li:nth-child(2)::after{
+        content: "👍" ;
+    }
+}
+
+
+/* STEP 21 */
