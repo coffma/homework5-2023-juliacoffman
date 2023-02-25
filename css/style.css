@@ -48,10 +48,15 @@ a:visited{
     justify-content: center;
 }
 
-.gallery img{
+.gallery>img{
     width: 300px;
     margin: 10px;
     border: solid 10px #50c7c7;
+}
+.gallery{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 @media screen and (min-width: 900px){
     header{
@@ -90,11 +95,12 @@ a:visited{
         display: flex;
         flex-direction: row;
         justify-content: space-around;
+        width: auto;
     }
     .nav_links{
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        width: auto;
     }
     .pricing{
         display: flex;
